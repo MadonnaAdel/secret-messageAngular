@@ -1,0 +1,27 @@
+<section class="signIn">
+    <div class="signInForm w-75 m-auto bg-white p-5">
+        <h1 class="fw-bolder">Login here</h1>
+        <p class="lead">Hello! Enter your Name and Password </p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mx-4 mt-2">
+            <div>
+                <label for="username"> User Name</label>
+                <input id="username" type="text" class="form-control my-3" formControlName="username">
+                <div *ngIf="f['username'].invalid && (f['username'].dirty || f['username'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['username'].errors?.['required']">User Name is Requierd.</div>
+                </div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" class="form-control my-3" formControlName="password">
+                <div *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['password'].errors?.['required']">Password is Requierd.</div>
+                </div>
+            </div>
+            <button class="btn btn-info" type="submit" [disabled]="loginForm.invalid"> Login</button>
+        </form>
+        <div class="text-danger mt-3" *ngIf="errorMessage">Ops! An error occurred. Please make sure the email and
+            password are correct</div>
+    </div>
+</section>

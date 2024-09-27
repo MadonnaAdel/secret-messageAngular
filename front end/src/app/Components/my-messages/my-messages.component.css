@@ -1,0 +1,61 @@
+.sendBox {
+    border: 3px dashed rgba(246, 233, 114, 0.813);
+}
+
+.photo {
+    top: -30%;
+    right: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+}
+
+.top {
+    background-color: #2d2f31;
+    z-index: 1;
+    width: 100%;
+    height: 30vh;
+}
+
+.buttom {
+    background-color: rgb(3 12 139);
+    z-index: 1;
+    width: 100%;
+    height: 70vh;
+}
+
+.topText {
+    margin-bottom: 5%;
+
+}
+
+@media (max-width: 770px) {
+    .topText {
+        margin-bottom: 10%;
+        font-size: 13px;
+    }
+}
+
+.messageImg {
+    width: 70px;
+    height: 60px;
+}
+
+.message-box {
+  position: relative;
+  margin-bottom: 10px;
+   max-height: 300px;
+    min-height: fit-content;
+}
+
+.message-box::before {
+  content: '';
+  position: absolute;
+ top: 17%;
+    left: 9%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f1f2f3; 
+  transform: translateY(-50%);
+}

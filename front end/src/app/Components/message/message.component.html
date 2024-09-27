@@ -1,0 +1,30 @@
+<div class="top align-items-center d-flex">
+    <div class="text-white text-center mx-auto topText w-75">
+        You can write what you want here and make sure that we cannot know you, we will be very happy to share your
+        opinion
+        frankly so that we can develop ourselves
+    </div>
+</div>
+<div class="buttom">
+    <section class="bg-white w-50 p-4 m-auto rounded-3 sendBox position-relative">
+        <div class="rounded-circle overflow-hidden border border-3 border-white  position-absolute photo" >
+            <img src="../../../assets/WhatsApp Image 2024-09-18 at 15.49.13_c1e2095c.jpg" alt="" width="100%"
+                height="100%" (click)="navigateToLogin()">
+        </div>
+        <textarea [(ngModel)]="message" name="message" id="" class="form-control mt-5 mb-3" rows="5"
+            placeholder=" write your opinion here..."></textarea>
+        <button (click)="sendMessage()" class="btn btn-outline-primary w-75 mx-auto d-block"> <i
+                class="fa-regular fa-paper-plane"></i> Send</button>
+    </section>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="creatToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto ms-3">Notifcations</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body fs-3 fw-medium">
+            {{toastMessage}}
+        </div>
+    </div>
+</div>
